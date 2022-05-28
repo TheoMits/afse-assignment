@@ -1,7 +1,7 @@
 package com.mits.moviesapp.data.remote.dto.search
 
 import com.google.gson.annotations.SerializedName
-import com.mits.moviesapp.domain.model.MediaItem
+import com.mits.moviesapp.domain.model.SearchItem
 
 data class Result(
     val adult: Boolean,
@@ -44,8 +44,8 @@ data class Result(
     val voteCount: Int
 )
 
-fun Result.toMediaItem(): MediaItem {
-    return MediaItem(
+fun Result.toMediaItem(): SearchItem {
+    return SearchItem(
         imagePath = posterPath,
         title = if (originalName.isNullOrEmpty()) originalTitle!! else originalName,
         releaseDate = if (firstAirDate.isNullOrEmpty()) releaseDate!! else firstAirDate,
