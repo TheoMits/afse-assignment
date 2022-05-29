@@ -18,12 +18,12 @@ interface TheMovieDbApi {
     @GET("/movie/{movieId}")
     suspend fun getMovieById(
         @Query("api_key") apiKey: String,
-        @Path("movieId") itemId: String,
+        @Path("movieId") movieId: Int,
     ): MovieDto
 
     @GET("/tv/{tvShowId}")
     suspend fun getTvShowById(
         @Query("api_key") apiKey: String,
-        @Path("tvShowId") itemId: String
+        @Path("tvShowId") tvShowId: Int
     ): TvShowDto
 }

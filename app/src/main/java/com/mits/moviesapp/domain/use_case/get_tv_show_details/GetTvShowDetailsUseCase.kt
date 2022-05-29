@@ -9,7 +9,7 @@ import javax.inject.Inject
 class GetTvShowDetailsUseCase @Inject constructor(
     private val repository: MediaRepository
 ) {
-    operator fun invoke(apiKey: String, tvShowId: String): Flow<Resource<MediaDetails>> {
+    operator fun invoke(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetails>> {
         return repository.getTvShowById(apiKey, tvShowId)
     }
 }

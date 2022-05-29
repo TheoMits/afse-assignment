@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 interface MediaRepository {
     fun searchMediaItems(apiKey: String, query: String, page: Int): Flow<Resource<List<SearchItem>>>
 
-    fun getMovieById(apiKey: String, movieId: String): Flow<Resource<MediaDetails>>
+    fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetails>>
 
-    fun getTvShowById(apiKey: String, tvShowId: String): Flow<Resource<MediaDetails>>
+    fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetails>>
 }

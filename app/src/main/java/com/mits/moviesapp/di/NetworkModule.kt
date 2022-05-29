@@ -1,6 +1,5 @@
 package com.mits.moviesapp.di
 
-import com.google.gson.Gson
 import com.mits.moviesapp.common.Constants.BASE_URL
 import com.mits.moviesapp.data.remote.TheMovieDbApi
 import dagger.Module

@@ -38,7 +38,7 @@ class MediaRepositoryImpl @Inject constructor(
 
     }
 
-    override fun getMovieById(apiKey: String, movieId: String): Flow<Resource<MediaDetails>> {
+    override fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetails>> {
         val response = flow {
             try {
                 emit(Resource.Loading())
@@ -58,7 +58,7 @@ class MediaRepositoryImpl @Inject constructor(
         return response
     }
 
-    override fun getTvShowById(apiKey: String, tvShowId: String): Flow<Resource<MediaDetails>> {
+    override fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetails>> {
         val response = flow {
             try {
                 emit(Resource.Loading())
