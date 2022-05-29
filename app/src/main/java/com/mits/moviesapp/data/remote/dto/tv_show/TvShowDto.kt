@@ -1,7 +1,7 @@
 package com.mits.moviesapp.data.remote.dto.tv_show
 
 import com.google.gson.annotations.SerializedName
-import com.mits.moviesapp.domain.model.MediaDetail
+import com.mits.moviesapp.domain.model.MediaDetails
 
 data class TvShowDto(
     val adult: Boolean,
@@ -57,8 +57,8 @@ data class TvShowDto(
     val voteCount: Int
 )
 
-fun TvShowDto.toMediaDetail(): MediaDetail {
-    return MediaDetail(
+fun TvShowDto.toMediaDetail(): MediaDetails {
+    return MediaDetails(
         title = originalName,
         imagePath = posterPath,
         summary = overview,

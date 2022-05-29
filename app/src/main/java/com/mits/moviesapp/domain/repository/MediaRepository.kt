@@ -1,13 +1,14 @@
 package com.mits.moviesapp.domain.repository
 
-import com.mits.moviesapp.data.remote.dto.movie.MovieDto
-import com.mits.moviesapp.data.remote.dto.search.MultiSearchDto
-import com.mits.moviesapp.data.remote.dto.tv_show.TvShowDto
+import com.mits.moviesapp.common.Resource
+import com.mits.moviesapp.domain.model.MediaDetails
+import com.mits.moviesapp.domain.model.SearchItem
+import kotlinx.coroutines.flow.Flow
 
 interface MediaRepository {
-    suspend fun searchMediaItems(apiKey: String, query: String, page: Int): MultiSearchDto
+    fun searchMediaItems(apiKey: String, query: String, page: Int): Flow<Resource<List<SearchItem>>>
 
-    suspend fun getMovieById(apiKey: String, movieId: String): MovieDto
+    fun getMovieById(apiKey: String, movieId: String): Flow<Resource<MediaDetails>>
 
-    suspend fun getTvShowById(apiKey: String, tvShowId: String): TvShowDto
+    fun getTvShowById(apiKey: String, tvShowId: String): Flow<Resource<MediaDetails>>
 }

@@ -1,6 +1,6 @@
 package com.mits.moviesapp.domain.model
 
-data class MediaDetail(
+data class MediaDetails(
     val title: String,
     val imagePath: String,
     val summary: String,
