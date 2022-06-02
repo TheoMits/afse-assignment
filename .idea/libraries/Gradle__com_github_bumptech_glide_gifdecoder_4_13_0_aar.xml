@@ -1,12 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.13.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/463f2ebc49241479009b6faf339d4207/transformed/jetified-gifdecoder-4.13.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/74ed58b0ac736d0be7bf3b76705dcdc0/transformed/jetified-gifdecoder-4.13.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/463f2ebc49241479009b6faf339d4207/transformed/jetified-gifdecoder-4.13.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/463f2ebc49241479009b6faf339d4207/transformed/jetified-gifdecoder-4.13.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/463f2ebc49241479009b6faf339d4207/transformed/jetified-gifdecoder-4.13.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/74ed58b0ac736d0be7bf3b76705dcdc0/transformed/jetified-gifdecoder-4.13.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/74ed58b0ac736d0be7bf3b76705dcdc0/transformed/jetified-gifdecoder-4.13.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/74ed58b0ac736d0be7bf3b76705dcdc0/transformed/jetified-gifdecoder-4.13.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.13.0/aebee8af1fae41ae978293539efd735e9d3233dc/gifdecoder-4.13.0-javadoc.jar!/" />

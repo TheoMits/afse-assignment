@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6f56f1ba082def6824815720dcd6c58c/transformed/interpolator-1.0.0/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/6f56f1ba082def6824815720dcd6c58c/transformed/interpolator-1.0.0/res" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ce76f015c39ca512724e6ccdf4da2cad/transformed/interpolator-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ce76f015c39ca512724e6ccdf4da2cad/transformed/interpolator-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ce76f015c39ca512724e6ccdf4da2cad/transformed/interpolator-1.0.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d5c9fb36569f394e0098b926fa640df2/transformed/interpolator-1.0.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d5c9fb36569f394e0098b926fa640df2/transformed/interpolator-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d5c9fb36569f394e0098b926fa640df2/transformed/interpolator-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

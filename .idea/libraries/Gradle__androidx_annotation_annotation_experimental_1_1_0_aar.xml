@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.annotation:annotation-experimental:1.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/eb57dff8ae6edd5f6e67375533f4023b/transformed/jetified-annotation-experimental-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/eb57dff8ae6edd5f6e67375533f4023b/transformed/jetified-annotation-experimental-1.1.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/eb57dff8ae6edd5f6e67375533f4023b/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/9e5bdecbe14515fdc3b5e093107e1140/transformed/jetified-annotation-experimental-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/9e5bdecbe14515fdc3b5e093107e1140/transformed/jetified-annotation-experimental-1.1.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/9e5bdecbe14515fdc3b5e093107e1140/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

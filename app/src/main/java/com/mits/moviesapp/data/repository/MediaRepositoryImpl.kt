@@ -1,7 +1,7 @@
 package com.mits.moviesapp.data.repository
 
 import com.mits.moviesapp.common.Resource
-import com.mits.moviesapp.common.enums.Type
+import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.data.remote.TheMovieDbApi
 import com.mits.moviesapp.data.remote.dto.movie.toMediaDetail
 import com.mits.moviesapp.data.remote.dto.search.toSearchItem
@@ -32,7 +32,7 @@ class MediaRepositoryImpl @Inject constructor(
                         apiKey,
                         query,
                         page
-                    ).results.mapNotNull { if (it.mediaType != Type.PERSON) it.toSearchItem() else null }
+                    ).results.mapNotNull { if (it.mediaType != MediaType.PERSON) it.toSearchItem() else null }
                 emit(Resource.Success(response))
             } catch (e: HttpException) {
                 emit(Resource.Error("", e.code()))

@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/65c86e9a1ba708a69605497f759fe8de/transformed/vectordrawable-animated-1.1.0/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/65c86e9a1ba708a69605497f759fe8de/transformed/vectordrawable-animated-1.1.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f6c12349fd56d800c7ffbbe39ffa6d6/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f6c12349fd56d800c7ffbbe39ffa6d6/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f6c12349fd56d800c7ffbbe39ffa6d6/transformed/vectordrawable-animated-1.1.0/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/aae29cd72640564b0637d710a745c832/transformed/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/aae29cd72640564b0637d710a745c832/transformed/vectordrawable-animated-1.1.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/aae29cd72640564b0637d710a745c832/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

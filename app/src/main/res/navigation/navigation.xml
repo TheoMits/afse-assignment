@@ -9,10 +9,21 @@
         android:id="@+id/searchFragment"
         android:name="com.mits.moviesapp.presentation.search.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.mits.moviesapp.presentation.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="mediaId"
+            app:argType="integer" />
+        <argument
+            android:name="mediaType"
+            app:argType="com.mits.moviesapp.common.enums.Type" />
+    </fragment>
 </navigation>

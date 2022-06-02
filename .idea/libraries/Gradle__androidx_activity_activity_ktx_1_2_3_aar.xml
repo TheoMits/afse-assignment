@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.activity:activity-ktx:1.2.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/4a1167aa97f7a9b15bd48f4aac37ea15/transformed/jetified-activity-ktx-1.2.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/4a1167aa97f7a9b15bd48f4aac37ea15/transformed/jetified-activity-ktx-1.2.3/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/4a1167aa97f7a9b15bd48f4aac37ea15/transformed/jetified-activity-ktx-1.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/cc24cf43f422c6e50891876cb72c3a19/transformed/jetified-activity-ktx-1.2.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/cc24cf43f422c6e50891876cb72c3a19/transformed/jetified-activity-ktx-1.2.3/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/cc24cf43f422c6e50891876cb72c3a19/transformed/jetified-activity-ktx-1.2.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/72f5d20b2fd0ec57a912b440df354332/transformed/lifecycle-viewmodel-savedstate-2.3.1/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/e6be8eb5b111c5dcbeddbb893949995b/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1c20fa44a42096a7364c0e586a8f0ab6/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1c20fa44a42096a7364c0e586a8f0ab6/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1c20fa44a42096a7364c0e586a8f0ab6/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1fc357fbd31e0bb88e3e29bd131e756c/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1fc357fbd31e0bb88e3e29bd131e756c/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1fc357fbd31e0bb88e3e29bd131e756c/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

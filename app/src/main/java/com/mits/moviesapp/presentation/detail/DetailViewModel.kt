@@ -2,7 +2,7 @@ package com.mits.moviesapp.presentation.detail
 
 import androidx.lifecycle.*
 import com.mits.moviesapp.common.Resource
-import com.mits.moviesapp.common.enums.Type
+import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.domain.use_case.detail_use_cases.GetMovieDetailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
@@ -18,9 +18,9 @@ class DetailViewModel @Inject constructor(
     private val _detailState: MutableLiveData<DetailState> = MutableLiveData()
     val detailState: LiveData<DetailState> = _detailState
 
-    fun getMediaItemById(apiKey: String, id: Int, type: Type) {
-        when (type) {
-            Type.MOVIE -> {
+    fun getMediaItemById(apiKey: String, id: Int, mediaType: MediaType) {
+        when (mediaType) {
+            MediaType.MOVIE -> {
                 getMovieDetailsUseCase(apiKey, id).onEach { result ->
                     when (result) {
                         is Resource.Loading -> {
@@ -39,7 +39,7 @@ class DetailViewModel @Inject constructor(
                     }
                 }.launchIn(viewModelScope)
             }
-            Type.TV -> {
+            MediaType.TV -> {
                 getTvShowDetailsUseCase(apiKey, id).onEach { result ->
                     when (result) {
                         is Resource.Loading -> {

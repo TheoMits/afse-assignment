@@ -1,12 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.exifinterface:exifinterface:1.2.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ecc1c64e1bc672f09cc349b28ea257b5/transformed/exifinterface-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/e8d10f4e5e01927e95ec1a4f1c87f717/transformed/exifinterface-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ecc1c64e1bc672f09cc349b28ea257b5/transformed/exifinterface-1.2.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ecc1c64e1bc672f09cc349b28ea257b5/transformed/exifinterface-1.2.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/ecc1c64e1bc672f09cc349b28ea257b5/transformed/exifinterface-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/e8d10f4e5e01927e95ec1a4f1c87f717/transformed/exifinterface-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/e8d10f4e5e01927e95ec1a4f1c87f717/transformed/exifinterface-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/e8d10f4e5e01927e95ec1a4f1c87f717/transformed/exifinterface-1.2.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

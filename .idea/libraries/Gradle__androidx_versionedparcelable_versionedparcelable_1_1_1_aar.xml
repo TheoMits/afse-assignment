@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f2416a8f398ec1e28d764f47475f534b/transformed/versionedparcelable-1.1.1/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f2416a8f398ec1e28d764f47475f534b/transformed/versionedparcelable-1.1.1/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a42e7b62d4c0ab0d318d82496ea0a095/transformed/versionedparcelable-1.1.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a42e7b62d4c0ab0d318d82496ea0a095/transformed/versionedparcelable-1.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a42e7b62d4c0ab0d318d82496ea0a095/transformed/versionedparcelable-1.1.1/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c3eeb3f94d0ed7846a30c912c15c3d1d/transformed/versionedparcelable-1.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c3eeb3f94d0ed7846a30c912c15c3d1d/transformed/versionedparcelable-1.1.1/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c3eeb3f94d0ed7846a30c912c15c3d1d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

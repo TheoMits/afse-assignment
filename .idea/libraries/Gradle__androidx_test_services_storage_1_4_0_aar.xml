@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9e8aab3978f7c0507472a0d893e855e5/transformed/storage-1.4.0/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/8e3e42c04021cdec18c0361d38602e83/transformed/jetified-storage-1.4.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/477f66d4d10b2137e75cf76cc0caaff7/transformed/jetified-storage-1.4.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/477f66d4d10b2137e75cf76cc0caaff7/transformed/jetified-storage-1.4.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/477f66d4d10b2137e75cf76cc0caaff7/transformed/jetified-storage-1.4.0/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c46aca650742e693165b69d30b1ceeaf/transformed/jetified-storage-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c46aca650742e693165b69d30b1ceeaf/transformed/jetified-storage-1.4.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c46aca650742e693165b69d30b1ceeaf/transformed/jetified-storage-1.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

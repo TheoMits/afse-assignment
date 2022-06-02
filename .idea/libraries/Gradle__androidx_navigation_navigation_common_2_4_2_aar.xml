@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-common:2.4.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f88d0baca4c9b0a1badd5ff1f6a9ffc/transformed/navigation-common-2.4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f88d0baca4c9b0a1badd5ff1f6a9ffc/transformed/navigation-common-2.4.2/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/7f88d0baca4c9b0a1badd5ff1f6a9ffc/transformed/navigation-common-2.4.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/af654f974e9f1a81773adb9aec5992b2/transformed/navigation-common-2.4.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/af654f974e9f1a81773adb9aec5992b2/transformed/navigation-common-2.4.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/af654f974e9f1a81773adb9aec5992b2/transformed/navigation-common-2.4.2/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

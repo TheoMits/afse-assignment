@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/26f147b2d58e96727fa66169762c5e60/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/26f147b2d58e96727fa66169762c5e60/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/26f147b2d58e96727fa66169762c5e60/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d4ef64f8400b0311010ace7f799e05a4/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d4ef64f8400b0311010ace7f799e05a4/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/d4ef64f8400b0311010ace7f799e05a4/transformed/jetified-lifecycle-viewmodel-ktx-2.4.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

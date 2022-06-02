@@ -1,7 +1,7 @@
 package com.mits.moviesapp.data.remote.dto.search
 
 import com.google.gson.annotations.SerializedName
-import com.mits.moviesapp.common.enums.Type
+import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.domain.model.SearchItem
 
 data class Result(
@@ -19,8 +19,8 @@ data class Result(
     @SerializedName("known_for_department")
     val knownForDepartment: String,
     @SerializedName("media_type")
-    val mediaType: Type,
-    val name: String,
+    val mediaType: MediaType,
+    val name: String?,
     @SerializedName("origin_country")
     val originCountry: List<String>,
     @SerializedName("original_language")
@@ -37,7 +37,7 @@ data class Result(
     val profilePath: String,
     @SerializedName("release_date")
     val releaseDate: String?,
-    val title: String,
+    val title: String?,
     val video: Boolean,
     @SerializedName("vote_average")
     val voteAverage: Double,
@@ -48,7 +48,7 @@ data class Result(
 fun Result.toSearchItem(): SearchItem {
     return SearchItem(
         id = id,
-        title = if (originalName.isNullOrEmpty()) originalTitle!! else originalName,
+        title = if (name.isNullOrEmpty()) title!! else name,
         imagePath = posterPath,
         releaseDate = if (firstAirDate.isNullOrEmpty()) releaseDate else firstAirDate,
         ratings = voteAverage,

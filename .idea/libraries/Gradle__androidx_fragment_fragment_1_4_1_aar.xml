@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.fragment:fragment:1.4.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/b06c31a1d73775c6c5268e848fa7db8f/transformed/fragment-1.4.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/b06c31a1d73775c6c5268e848fa7db8f/transformed/fragment-1.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/b06c31a1d73775c6c5268e848fa7db8f/transformed/fragment-1.4.1/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/b06c31a1d73775c6c5268e848fa7db8f/transformed/fragment-1.4.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.transition:transition:1.2.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c538bc7abd558d32ff43a200281138b2/transformed/transition-1.2.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/caa3e78e9cfdc6bd6960d561a381913c/transformed/transition-1.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c538bc7abd558d32ff43a200281138b2/transformed/transition-1.2.0/res" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c538bc7abd558d32ff43a200281138b2/transformed/transition-1.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c538bc7abd558d32ff43a200281138b2/transformed/transition-1.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/caa3e78e9cfdc6bd6960d561a381913c/transformed/transition-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/caa3e78e9cfdc6bd6960d561a381913c/transformed/transition-1.2.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/caa3e78e9cfdc6bd6960d561a381913c/transformed/transition-1.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

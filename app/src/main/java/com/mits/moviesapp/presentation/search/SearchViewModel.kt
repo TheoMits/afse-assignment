@@ -30,7 +30,6 @@ class SearchViewModel @Inject constructor(
                 }
                 is Resource.Success -> {
                     result.data?.let { mediaItems.addAll(it) }
-                    Log.e("media items size", mediaItems.size.toString())
                     _searchState.value = SearchState(mediaList = mediaItems)
                 }
                 is Resource.Error -> {

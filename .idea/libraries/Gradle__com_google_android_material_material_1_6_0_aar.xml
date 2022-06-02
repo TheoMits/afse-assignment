@@ -1,12 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.material:material:1.6.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/203ddc2403c8e92a000a193eb3e79826/transformed/material-1.6.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/bd713cda102f372f4c204e6abdc6a8ad/transformed/material-1.6.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/203ddc2403c8e92a000a193eb3e79826/transformed/material-1.6.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/203ddc2403c8e92a000a193eb3e79826/transformed/material-1.6.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/203ddc2403c8e92a000a193eb3e79826/transformed/material-1.6.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/bd713cda102f372f4c204e6abdc6a8ad/transformed/material-1.6.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/bd713cda102f372f4c204e6abdc6a8ad/transformed/material-1.6.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/bd713cda102f372f4c204e6abdc6a8ad/transformed/material-1.6.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/mediaParent">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/mediaImg"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:alpha="0.9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@color/black"
+        app:shapeAppearanceOverlay="@style/rounded_img"/>
 
     <TextView
         android:id="@+id/mediaTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:maxLines="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/mediaImg"
         app:layout_constraintStart_toStartOf="@+id/mediaImg"
         app:layout_constraintTop_toBottomOf="@+id/mediaImg" />
+
+    <TextView
+        android:id="@+id/mediaRatings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/ratings_background"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/white"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/mediaImg"
+        app:layout_constraintTop_toTopOf="@+id/mediaImg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/af71f8f971b7a6964411aa4b58eea92c/transformed/lifecycle-livedata-core-2.3.1/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/af71f8f971b7a6964411aa4b58eea92c/transformed/lifecycle-livedata-core-2.3.1/res" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/40cec60376b57459eb8f1fa54ebf31b5/transformed/lifecycle-livedata-core-2.3.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/40cec60376b57459eb8f1fa54ebf31b5/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/40cec60376b57459eb8f1fa54ebf31b5/transformed/lifecycle-livedata-core-2.3.1/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f4f932a2d6a2fb1bb9a0549df32e9d9b/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f4f932a2d6a2fb1bb9a0549df32e9d9b/transformed/lifecycle-livedata-core-2.3.1/res" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f4f932a2d6a2fb1bb9a0549df32e9d9b/transformed/lifecycle-livedata-core-2.3.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -3,9 +3,10 @@
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/c8666a6480665724f5d5539c8dc4d89f/transformed/dynamicanimation-1.0.0/res" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c8666a6480665724f5d5539c8dc4d89f/transformed/dynamicanimation-1.0.0/res" />
-      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1b6b4673bec4ba32823102294044cdae/transformed/dynamicanimation-1.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1b6b4673bec4ba32823102294044cdae/transformed/dynamicanimation-1.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/1b6b4673bec4ba32823102294044cdae/transformed/dynamicanimation-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/084e66d0e7c2f9815545c25288514e58/transformed/dynamicanimation-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/084e66d0e7c2f9815545c25288514e58/transformed/dynamicanimation-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/084e66d0e7c2f9815545c25288514e58/transformed/dynamicanimation-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,6 +1,6 @@
 package com.mits.moviesapp.domain.model
 
-import com.mits.moviesapp.common.enums.Type
+import com.mits.moviesapp.common.enums.MediaType
 
 data class SearchItem(
     val id: Int,
@@ -8,5 +8,5 @@ data class SearchItem(
     val imagePath: String?,
     val releaseDate: String?,
     val ratings: Double,
-    val mediaType: Type
+    val mediaType: MediaType
 )
