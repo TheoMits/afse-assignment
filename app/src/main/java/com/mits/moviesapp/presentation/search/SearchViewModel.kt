@@ -18,8 +18,8 @@ class SearchViewModel @Inject constructor(
     private val _searchState: MutableStateFlow<SearchState> = MutableStateFlow(SearchState())
     val searchState: StateFlow<SearchState> = _searchState.asStateFlow()
     var mediaItems = mutableListOf<SearchItem>()
-//    var searchPage = 1
-//    var editable = ""
+    var searchPage = 1
+    var editable = ""
 
     fun searchMediaItems(apiKey: String, query: String, page: Int) {
         Log.e("query", query)
@@ -30,6 +30,7 @@ class SearchViewModel @Inject constructor(
                 }
                 is Resource.Success -> {
                     result.data?.let { mediaItems.addAll(it) }
+                    Log.e("media items size", mediaItems.size.toString())
                     _searchState.value = SearchState(mediaList = mediaItems)
                 }
                 is Resource.Error -> {

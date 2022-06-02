@@ -47,16 +47,16 @@ class SearchFragment : Fragment() {
                 }
         }
 
-//        binding.searchRv.setOnScrollChangeListener { view, i, i2, i3, i4 ->
-//            if (!binding.searchRv.canScrollVertically(1)) {
-//                if (!isLoading) {
-//                    viewModel.searchMediaItems(API_KEY, viewModel.editable, viewModel.searchPage)
-//                }
-//            }
-//        }
+        binding.searchRv.setOnScrollChangeListener { view, i, i2, i3, i4 ->
+            if (!binding.searchRv.canScrollVertically(1)) {
+                if (!isLoading) {
+                    viewModel.searchMediaItems(API_KEY, viewModel.editable, viewModel.searchPage)
+                }
+            }
+        }
 
         binding.searchInput.editText?.addTextChangedListener {
-//            viewModel.editable = it.toString()
+            viewModel.editable = it.toString()
             viewModel.searchMediaItems(API_KEY, it.toString(), 1)
         }
 
