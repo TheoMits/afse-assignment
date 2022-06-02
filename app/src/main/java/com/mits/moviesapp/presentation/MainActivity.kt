@@ -1,4 +1,4 @@
-package com.mits.moviesapp.ui
+package com.mits.moviesapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

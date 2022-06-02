@@ -1,4 +1,4 @@
-package com.mits.moviesapp.domain.use_case.search_media_item
+package com.mits.moviesapp.domain.use_case.search_use_cases
 
 import com.mits.moviesapp.common.Resource
 import com.mits.moviesapp.domain.model.SearchItem

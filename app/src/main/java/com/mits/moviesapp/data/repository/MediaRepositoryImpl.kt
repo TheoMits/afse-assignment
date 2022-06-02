@@ -1,10 +1,12 @@
 package com.mits.moviesapp.data.repository
 
 import com.mits.moviesapp.common.Resource
+import com.mits.moviesapp.common.enums.Type
 import com.mits.moviesapp.data.remote.TheMovieDbApi
 import com.mits.moviesapp.data.remote.dto.movie.toMediaDetail
-import com.mits.moviesapp.data.remote.dto.search.toMediaItem
-import com.mits.moviesapp.domain.model.MediaDetails
+import com.mits.moviesapp.data.remote.dto.search.toSearchItem
+import com.mits.moviesapp.data.remote.dto.tv_show.toMediaDetail
+import com.mits.moviesapp.domain.model.MediaDetail
 import com.mits.moviesapp.domain.model.SearchItem
 import com.mits.moviesapp.domain.repository.MediaRepository
 import kotlinx.coroutines.flow.Flow
@@ -26,19 +28,22 @@ class MediaRepositoryImpl @Inject constructor(
             try {
                 emit(Resource.Loading())
                 val response =
-                    api.searchMediaItems(apiKey, query, page).results.map { it.toMediaItem() }
+                    api.searchMediaItems(
+                        apiKey,
+                        query,
+                        page
+                    ).results.mapNotNull { if (it.mediaType != Type.PERSON) it.toSearchItem() else null }
                 emit(Resource.Success(response))
             } catch (e: HttpException) {
-                emit(Resource.Error(e.localizedMessage ?: "Something went wrong", e.code()))
+                emit(Resource.Error("", e.code()))
             } catch (e: IOException) {
                 emit(Resource.Error("Check your internet connection", 0))
             }
         }
         return response
-
     }
 
-    override fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetails>> {
+    override fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetail>> {
         val response = flow {
             try {
                 emit(Resource.Loading())
@@ -58,11 +63,11 @@ class MediaRepositoryImpl @Inject constructor(
         return response
     }
 
-    override fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetails>> {
+    override fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetail>> {
         val response = flow {
             try {
                 emit(Resource.Loading())
-                val response = api.getMovieById(apiKey, tvShowId).toMediaDetail()
+                val response = api.getTvShowById(apiKey, tvShowId).toMediaDetail()
                 emit(Resource.Success(response))
             } catch (e: HttpException) {
                 emit(Resource.Error(e.localizedMessage ?: "Something went wrong", e.code()))

@@ -1,7 +1,7 @@
 package com.mits.moviesapp.data.remote.dto.movie
 
 import com.google.gson.annotations.SerializedName
-import com.mits.moviesapp.domain.model.MediaDetails
+import com.mits.moviesapp.domain.model.MediaDetail
 
 data class MovieDto(
     val adult: Boolean,
@@ -43,8 +43,8 @@ data class MovieDto(
     val voteCount: Int
 )
 
-fun MovieDto.toMediaDetail(): MediaDetails {
-    return MediaDetails(
+fun MovieDto.toMediaDetail(): MediaDetail {
+    return MediaDetail(
         title = originalTitle,
         imagePath = posterPath,
         summary = overview,

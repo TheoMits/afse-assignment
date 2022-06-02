@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.mits.moviesapp"
-        minSdk 30
+        minSdk 28
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -58,6 +62,10 @@ dependencies {
     //Dagger - Hilt
     implementation 'com.google.dagger:hilt-android:2.42'
     kapt 'com.google.dagger:hilt-compiler:2.42'
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
 
     //glide
     implementation 'com.github.bumptech.glide:glide:4.13.0'

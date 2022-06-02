@@ -8,20 +8,20 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface TheMovieDbApi {
-    @GET("/search/multi")
+    @GET("search/multi")
     suspend fun searchMediaItems(
         @Query("api_key") apiKey: String,
         @Query("query") query: String,
         @Query("page") page: Int
     ): MultiSearchDto
 
-    @GET("/movie/{movieId}")
+    @GET("movie/{movieId}")
     suspend fun getMovieById(
         @Query("api_key") apiKey: String,
         @Path("movieId") movieId: Int,
     ): MovieDto
 
-    @GET("/tv/{tvShowId}")
+    @GET("tv/{tvShowId}")
     suspend fun getTvShowById(
         @Query("api_key") apiKey: String,
         @Path("tvShowId") tvShowId: Int
