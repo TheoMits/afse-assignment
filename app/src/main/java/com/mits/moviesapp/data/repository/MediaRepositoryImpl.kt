@@ -1,5 +1,6 @@
 package com.mits.moviesapp.data.repository
 
+import android.util.Log
 import com.mits.moviesapp.common.Resource
 import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.data.remote.TheMovieDbApi
@@ -44,10 +45,11 @@ class MediaRepositoryImpl @Inject constructor(
     }
 
     override fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetail>> {
+        Log.e("movie", movieId.toString())
         val response = flow {
             try {
                 emit(Resource.Loading())
-                val response = api.getMovieById(apiKey, movieId).toMediaDetail()
+                val response = api.getMovieById(movieId, apiKey).toMediaDetail()
                 emit(Resource.Success(response))
             } catch (e: HttpException) {
                 emit(Resource.Error(e.localizedMessage ?: "Something went wrong", e.code()))
@@ -64,10 +66,11 @@ class MediaRepositoryImpl @Inject constructor(
     }
 
     override fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetail>> {
+        Log.e("tv show", tvShowId.toString())
         val response = flow {
             try {
                 emit(Resource.Loading())
-                val response = api.getTvShowById(apiKey, tvShowId).toMediaDetail()
+                val response = api.getTvShowById(tvShowId, apiKey).toMediaDetail()
                 emit(Resource.Success(response))
             } catch (e: HttpException) {
                 emit(Resource.Error(e.localizedMessage ?: "Something went wrong", e.code()))

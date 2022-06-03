@@ -1,5 +1,6 @@
 package com.mits.moviesapp.presentation.search
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -34,7 +35,10 @@ class SearchAdapter(private val mediaItemListener: MediaItemListener) :
                 .placeholder(R.drawable.media_placeholder).into(mediaImg)
             mediaTitle.text = item.title
             mediaRatings.text = item.ratings.toString()
-            mediaParent.setOnClickListener { mediaItemListener.onItemClicked(item.id, item.mediaType) }
+
+            mediaParent.setOnClickListener {
+                Log.e("item adapter id", item.id.toString())
+                mediaItemListener.onItemClicked(item.id, item.mediaType) }
         }
 
     }

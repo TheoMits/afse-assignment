@@ -3,6 +3,9 @@ package com.mits.moviesapp.di
 import com.mits.moviesapp.data.remote.TheMovieDbApi
 import com.mits.moviesapp.data.repository.MediaRepositoryImpl
 import com.mits.moviesapp.domain.repository.MediaRepository
+import com.mits.moviesapp.domain.use_case.detail_use_cases.DetailUseCases
+import com.mits.moviesapp.domain.use_case.detail_use_cases.GetMovieDetailsUseCase
+import com.mits.moviesapp.domain.use_case.detail_use_cases.GetTvShowDetailsUseCase
 import com.mits.moviesapp.domain.use_case.search_use_cases.SearchMediaItemUseCase
 import dagger.Module
 import dagger.Provides
@@ -22,7 +25,16 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideSearchMediaItemUseCase(repository: MediaRepository): SearchMediaItemUseCase{
+    fun provideSearchMediaItemUseCase(repository: MediaRepository): SearchMediaItemUseCase {
         return SearchMediaItemUseCase(repository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideDetailUseCases(repository: MediaRepository): DetailUseCases {
+        return DetailUseCases(
+            GetMovieDetailsUseCase(repository),
+            GetTvShowDetailsUseCase(repository)
+        )
     }
 }

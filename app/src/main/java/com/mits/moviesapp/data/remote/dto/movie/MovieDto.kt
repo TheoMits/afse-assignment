@@ -45,8 +45,9 @@ data class MovieDto(
 
 fun MovieDto.toMediaDetail(): MediaDetail {
     return MediaDetail(
-        title = originalTitle,
-        imagePath = posterPath,
+        title = title,
+        posterPath = posterPath,
+        backDropPath = backdropPath,
         summary = overview,
         genres = genres.map { it.name }
     )

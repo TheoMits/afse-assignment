@@ -1,16 +1,15 @@
 package com.mits.moviesapp.presentation.search
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.mits.moviesapp.R
 import com.mits.moviesapp.common.Constants.API_KEY
 import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.databinding.FragmentSearchBinding
@@ -22,6 +21,7 @@ import kotlinx.coroutines.launch
 class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
     private lateinit var binding: FragmentSearchBinding
     private lateinit var adapter: SearchAdapter
+    private lateinit var watchListItem: MenuItem
     private val viewModel: SearchViewModel by viewModels()
     private var isLoading = false
 
@@ -73,7 +73,13 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
     }
 
     override fun onItemClicked(mediaId: Int, mediaType: MediaType) {
-        findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToDetailFragment(id, mediaType))
+        findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToDetailFragment(mediaId, mediaType))
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.top_app_bar, menu)
+        watchListItem = menu.findItem(R.id.watch_list)
     }
 
 }

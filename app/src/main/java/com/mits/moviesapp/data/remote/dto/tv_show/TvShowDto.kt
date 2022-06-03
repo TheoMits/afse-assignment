@@ -6,7 +6,7 @@ import com.mits.moviesapp.domain.model.MediaDetail
 data class TvShowDto(
     val adult: Boolean,
     @SerializedName("backdrop_path")
-    val backdropPath: Any,
+    val backdropPath: String?,
     @SerializedName("created_by")
     val createdBy: List<Any>,
     @SerializedName("episode_run_time")
@@ -59,8 +59,9 @@ data class TvShowDto(
 
 fun TvShowDto.toMediaDetail(): MediaDetail {
     return MediaDetail(
-        title = originalName,
-        imagePath = posterPath,
+        title = name,
+        posterPath = posterPath,
+        backDropPath = backdropPath,
         summary = overview,
         genres = genres.map { it.name }
     )

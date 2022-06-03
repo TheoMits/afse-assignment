@@ -24,6 +24,6 @@
             app:argType="integer" />
         <argument
             android:name="mediaType"
-            app:argType="com.mits.moviesapp.common.enums.Type" />
+            app:argType="com.mits.moviesapp.common.enums.MediaType" />
     </fragment>
 </navigation>

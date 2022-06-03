@@ -4,19 +4,19 @@ import androidx.lifecycle.*
 import com.mits.moviesapp.common.Resource
 import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.domain.use_case.detail_use_cases.GetMovieDetailsUseCase
+import com.mits.moviesapp.domain.use_case.detail_use_cases.GetTvShowDetailsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     private val getMovieDetailsUseCase: GetMovieDetailsUseCase,
-    private val getTvShowDetailsUseCase: GetMovieDetailsUseCase,
+    private val getTvShowDetailsUseCase: GetTvShowDetailsUseCase,
 ) : ViewModel() {
 
-    private val _detailState: MutableLiveData<DetailState> = MutableLiveData()
-    val detailState: LiveData<DetailState> = _detailState
+    private val _detailState: MutableStateFlow<DetailState> = MutableStateFlow(DetailState())
+    val detailState: StateFlow<DetailState> = _detailState.asStateFlow()
 
     fun getMediaItemById(apiKey: String, id: Int, mediaType: MediaType) {
         when (mediaType) {
