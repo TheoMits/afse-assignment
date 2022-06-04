@@ -1,6 +1,5 @@
 package com.mits.moviesapp.presentation.search
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView

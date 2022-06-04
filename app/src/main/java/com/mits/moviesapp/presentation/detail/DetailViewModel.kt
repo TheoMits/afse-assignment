@@ -110,7 +110,7 @@ class DetailViewModel @Inject constructor(
                 }
 
                 is Resource.Success -> {
-                    result.data?.let { _detailState.value = DetailState(isInWatchList = false, view = view) }
+                    result.data?.let { _detailState.value = DetailState(isInWatchList = false,  view = view) }
                 }
 
                 is Resource.Error -> {

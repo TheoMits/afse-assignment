@@ -35,12 +35,13 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
         initAdapter()
-        updateIfOrientationChanged()
+        updateViews()
 
+        // observe search state
         lifecycleScope.launch {
             viewModel.searchState
                 .collect {
-                    updateUi(it)
+                    updateUiByState(it)
                 }
         }
 
@@ -64,14 +65,14 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         })
 
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
-            if (viewModel.isWatchListEnabled) {
+            if (viewModel.isWatchListEnabled()) {
                 viewModel.disableWatchList()
                 menuItem.setIcon(R.drawable.tv_disabled)
-                binding.searchInput.editText?.setText(viewModel.query)
+                binding.searchInput.editText?.setText(viewModel.getQuery())
             } else {
                 viewModel.enableWatchList()
                 menuItem.setIcon(R.drawable.tv_enabled)
-                binding.searchInput.editText?.setText(viewModel.query)
+                binding.searchInput.editText?.setText(viewModel.getQuery())
             }
             return@setOnMenuItemClickListener true
         }
@@ -84,13 +85,13 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         binding.searchRv.adapter = adapter
     }
 
-    private fun updateIfOrientationChanged() {
-        binding.searchInput.editText?.setText(viewModel.query)
-        binding.topAppBar.menu.getItem(0).setIcon(viewModel.menuIcon)
-        if (viewModel.isWatchListEnabled) viewModel.getWatchList()
+    private fun updateViews() {
+        binding.topAppBar.menu.getItem(0).setIcon(viewModel.getMenuIcon())
+        binding.searchInput.editText?.setText(viewModel.getQuery())
+        viewModel.onUpdateView()
     }
 
-    private fun updateUi(searchState: SearchState) {
+    private fun updateUiByState(searchState: SearchState) {
         if (!searchState.isLoading) adapter.submitList(searchState.searchList.toList())
         binding.searchProgressBar.isVisible = searchState.isLoading
         binding.searchErrorTv.text = searchState.error

@@ -21,9 +21,9 @@ class SearchViewModel @Inject constructor(
 
     private var mediaItems = mutableListOf<SearchItem>()
     private var searchPage = 1
-    var isWatchListEnabled = false
-    var query = ""
-    var menuIcon = R.drawable.tv_disabled
+    private var isWatchListEnabled = false
+    private var query = ""
+    private var menuIcon = R.drawable.tv_disabled
 
     init {
         searchMediaItems(API_KEY, query, searchPage)
@@ -48,7 +48,7 @@ class SearchViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    fun getWatchList() {
+    private fun getWatchList() {
         searchUseCases.getWatchListUseCase().onEach { result ->
             when (result) {
                 is Resource.Loading -> {
@@ -88,6 +88,17 @@ class SearchViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
+    fun isWatchListEnabled(): Boolean {
+        return isWatchListEnabled
+    }
+
+    fun getQuery(): String {
+        return query
+    }
+
+    fun getMenuIcon(): Int {
+        return menuIcon
+    }
 
     fun onRecyclerScroll() {
         if (!_searchState.value.isLoading && !isWatchListEnabled) {
@@ -97,38 +108,48 @@ class SearchViewModel @Inject constructor(
     }
 
     fun onSearchTextChanged(query: String) {
-        if (!isWatchListEnabled) {
-            // set new query
-            this.query = query
+        // set new query
+        this.query = query
+        if (isWatchListEnabled) {
+            when (query.isEmpty()) {
+                true -> getWatchList()
+                false -> searchMediaItemsInDB(query)
+            }
+        } else {
             // empty the list
             mediaItems = mutableListOf()
             // reset page
             searchPage = 1
             // make the call
             searchMediaItems(API_KEY, query, searchPage)
-        } else {
-            when (query.isEmpty()) {
-                true -> getWatchList()
-                false -> searchMediaItemsInDB(query)
-            }
         }
     }
 
     fun disableWatchList() {
+        resetValues()
         menuIcon = R.drawable.tv_disabled
-        mediaItems = mutableListOf()
-        searchPage = 1
-        query = ""
         searchMediaItems(API_KEY, query, searchPage)
         isWatchListEnabled = false
     }
 
     fun enableWatchList() {
+        resetValues()
         menuIcon = R.drawable.tv_enabled
+        getWatchList()
+        isWatchListEnabled = true
+    }
+
+    fun onUpdateView() {
+        if (isWatchListEnabled) {
+            if (query.isNotEmpty())
+                searchMediaItemsInDB(query)
+            else getWatchList()
+        }
+    }
+
+    private fun resetValues() {
         mediaItems = mutableListOf()
         searchPage = 1
         query = ""
-        getWatchList()
-        isWatchListEnabled = true
     }
 }
