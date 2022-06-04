@@ -1,29 +1,27 @@
 package com.mits.moviesapp.presentation.search
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.core.view.isVisible
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.mits.moviesapp.R
-import com.mits.moviesapp.common.Constants.API_KEY
 import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
     private lateinit var binding: FragmentSearchBinding
     private lateinit var adapter: SearchAdapter
-    private lateinit var watchListItem: MenuItem
     private val viewModel: SearchViewModel by viewModels()
-    private var isLoading = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,32 +35,46 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
 
         initAdapter()
+        updateIfOrientationChanged()
 
         lifecycleScope.launch {
             viewModel.searchState
-                .collectLatest {
-                    isLoading = it.isLoading
-                    if (!isLoading) adapter.submitList(it.mediaList.toList())
-                    binding.searchProgressBar.isVisible = it.isLoading
-                    binding.searchErrorTv.text = it.error
+                .collect {
+                    updateUi(it)
                 }
         }
 
-        binding.searchRv.setOnScrollChangeListener { view, i, i2, i3, i4 ->
+        binding.searchRv.setOnScrollChangeListener { _, _, _, _, _ ->
             if (!binding.searchRv.canScrollVertically(1)) {
-                if (!isLoading) {
-                    viewModel.searchPage++
-                    viewModel.searchMediaItems(API_KEY, viewModel.editable, viewModel.searchPage)
-                }
+                viewModel.onRecyclerScroll()
             }
         }
 
-        binding.searchInput.editText?.addTextChangedListener {
-//            viewModel.onEditText()
-            viewModel.editable = it.toString()
-            viewModel.searchMediaItems(API_KEY, it.toString(), 1)
-        }
+        binding.searchInput.editText?.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+
+            override fun afterTextChanged(query: Editable?) {
+                viewModel.onSearchTextChanged(query.toString())
+            }
+        })
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            if (viewModel.isWatchListEnabled) {
+                viewModel.onWatchListEnabled()
+                menuItem.setIcon(R.drawable.tv_disabled)
+                binding.searchInput.editText?.setText(viewModel.query)
+            } else {
+                viewModel.onWatchListDisabled()
+                menuItem.setIcon(R.drawable.tv_enabled)
+                binding.searchInput.editText?.setText(viewModel.query)
+            }
+            return@setOnMenuItemClickListener true
+        }
         return binding.root
     }
 
@@ -72,14 +84,26 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         binding.searchRv.adapter = adapter
     }
 
-    override fun onItemClicked(mediaId: Int, mediaType: MediaType) {
-        findNavController().navigate(SearchFragmentDirections.actionSearchFragmentToDetailFragment(mediaId, mediaType))
+    private fun updateIfOrientationChanged() {
+        binding.searchInput.editText?.setText(viewModel.query)
+        binding.topAppBar.menu.getItem(0).setIcon(viewModel.menuIcon)
+        if (viewModel.isWatchListEnabled) viewModel.getWatchList()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.top_app_bar, menu)
-        watchListItem = menu.findItem(R.id.watch_list)
+    private fun updateUi(searchState: SearchState) {
+        if (!searchState.isLoading) adapter.submitList(searchState.searchList.toList())
+        binding.searchProgressBar.isVisible = searchState.isLoading
+        binding.searchErrorTv.text = searchState.error
+    }
+
+    override fun onItemClicked(mediaId: Int, mediaType: MediaType) {
+        viewModel.onItemClicked()
+        findNavController().navigate(
+            SearchFragmentDirections.actionSearchFragmentToDetailFragment(
+                mediaId,
+                mediaType
+            )
+        )
     }
 
 }

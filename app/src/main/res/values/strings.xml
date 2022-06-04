@@ -2,4 +2,7 @@
     <string name="app_name">MoviesApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="watch_list">watch list</string>
+    <string name="added">Added to watch list</string>
+    <string name="deleted">Deleted from watch list</string>
 </resources>

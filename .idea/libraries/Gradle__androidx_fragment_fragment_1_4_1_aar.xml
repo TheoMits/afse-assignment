@@ -5,8 +5,8 @@
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/c38eaff90009286c592a14c6d6b3ca29/transformed/fragment-1.4.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

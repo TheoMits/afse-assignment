@@ -11,4 +11,16 @@ interface MediaRepository {
     fun getMovieById(apiKey: String, movieId: Int): Flow<Resource<MediaDetail>>
 
     fun getTvShowById(apiKey: String, tvShowId: Int): Flow<Resource<MediaDetail>>
+
+    fun getWatchList(): Flow<Resource<List<SearchItem>>>
+
+    fun getMediaItemByIdFromDB(id: Int): Flow<Resource<MediaDetail>>
+
+    fun searchMediaItemsInDB(query: String): Flow<Resource<List<SearchItem>>>
+
+    fun insertMediaItemInDB(mediaDetail: MediaDetail): Flow<Resource<Unit>>
+
+    fun deleteMediaItemFromDB(mediaDetail: MediaDetail): Flow<Resource<Unit>>
+
+    fun checkIfMediaItemExistsInDB(id: Int): Flow<Resource<Boolean>>
 }

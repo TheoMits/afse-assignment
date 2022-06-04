@@ -2,8 +2,8 @@
   <library name="Gradle: androidx.navigation:navigation-ui:2.4.2@aar">
     <CLASSES>
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a2c432b50bcc48424dae1170b7ac8246/transformed/navigation-ui-2.4.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a2c432b50bcc48424dae1170b7ac8246/transformed/navigation-ui-2.4.2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a2c432b50bcc48424dae1170b7ac8246/transformed/navigation-ui-2.4.2/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a2c432b50bcc48424dae1170b7ac8246/transformed/navigation-ui-2.4.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

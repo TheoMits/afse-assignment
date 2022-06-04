@@ -45,10 +45,13 @@ data class MovieDto(
 
 fun MovieDto.toMediaDetail(): MediaDetail {
     return MediaDetail(
+        id = id,
         title = title,
         posterPath = posterPath,
         backDropPath = backdropPath,
         summary = overview,
-        genres = genres.map { it.name }
+        genre = if (genres.isNotEmpty()) genres[0].name else "",
+        mediaType = null,
+        ratings = voteAverage
     )
 }

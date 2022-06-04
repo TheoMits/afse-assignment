@@ -4,9 +4,9 @@
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/res" />
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/0c2bc18eb3ed74099a5dd2abf561340f/transformed/drawerlayout-1.1.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

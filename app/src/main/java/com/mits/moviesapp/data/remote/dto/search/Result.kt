@@ -50,7 +50,6 @@ fun Result.toSearchItem(): SearchItem {
         id = id,
         title = if (name.isNullOrEmpty()) title!! else name,
         imagePath = posterPath,
-        releaseDate = if (firstAirDate.isNullOrEmpty()) releaseDate else firstAirDate,
         ratings = voteAverage,
         mediaType = mediaType
     )

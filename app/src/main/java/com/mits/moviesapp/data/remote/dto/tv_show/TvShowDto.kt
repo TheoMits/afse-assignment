@@ -59,10 +59,13 @@ data class TvShowDto(
 
 fun TvShowDto.toMediaDetail(): MediaDetail {
     return MediaDetail(
+        id = id,
         title = name,
         posterPath = posterPath,
         backDropPath = backdropPath,
         summary = overview,
-        genres = genres.map { it.name }
+        genre = if (genres.isNotEmpty()) genres[0].name else "",
+        mediaType = null,
+        ratings = voteAverage
     )
 }

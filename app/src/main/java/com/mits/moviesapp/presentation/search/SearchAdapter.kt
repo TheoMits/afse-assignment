@@ -37,10 +37,8 @@ class SearchAdapter(private val mediaItemListener: MediaItemListener) :
             mediaRatings.text = item.ratings.toString()
 
             mediaParent.setOnClickListener {
-                Log.e("item adapter id", item.id.toString())
-                mediaItemListener.onItemClicked(item.id, item.mediaType) }
+                mediaItemListener.onItemClicked(item.id, item.mediaType!!) }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

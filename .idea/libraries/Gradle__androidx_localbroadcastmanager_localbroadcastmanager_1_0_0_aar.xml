@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/da64b280e174979c60b9224c5a3d82ef/transformed/localbroadcastmanager-1.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/da64b280e174979c60b9224c5a3d82ef/transformed/localbroadcastmanager-1.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/b79dde9c52fec15334924977557b2f2d/transformed/localbroadcastmanager-1.0.0/res" />
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/891877adbef459cfbbc9d83144260d9d/transformed/localbroadcastmanager-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/891877adbef459cfbbc9d83144260d9d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/891877adbef459cfbbc9d83144260d9d/transformed/localbroadcastmanager-1.0.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/891877adbef459cfbbc9d83144260d9d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

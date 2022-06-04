@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.arch.core:core-runtime:2.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a286f950c6fc23b9d62e8c6ed35ac504/transformed/core-runtime-2.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/a286f950c6fc23b9d62e8c6ed35ac504/transformed/core-runtime-2.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/eb7d14fccc38ca0d1e0b219b0654ab9a/transformed/core-runtime-2.0.0/res" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f3cb0486bc8c52ea717967d242296ad9/transformed/core-runtime-2.0.0/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f3cb0486bc8c52ea717967d242296ad9/transformed/core-runtime-2.0.0/res" />
       <root url="jar://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f3cb0486bc8c52ea717967d242296ad9/transformed/core-runtime-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f3cb0486bc8c52ea717967d242296ad9/transformed/core-runtime-2.0.0/res" />
+      <root url="file://$USER_HOME$/softweb/kechri-android/caches/transforms-3/f3cb0486bc8c52ea717967d242296ad9/transformed/core-runtime-2.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
