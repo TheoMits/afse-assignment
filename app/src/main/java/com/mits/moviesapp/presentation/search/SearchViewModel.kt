@@ -114,11 +114,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    fun onItemClicked() {
-        mediaItems = mutableListOf()
-    }
-
-    fun onWatchListEnabled() {
+    fun disableWatchList() {
         menuIcon = R.drawable.tv_disabled
         mediaItems = mutableListOf()
         searchPage = 1
@@ -127,7 +123,7 @@ class SearchViewModel @Inject constructor(
         isWatchListEnabled = false
     }
 
-    fun onWatchListDisabled() {
+    fun enableWatchList() {
         menuIcon = R.drawable.tv_enabled
         mediaItems = mutableListOf()
         searchPage = 1

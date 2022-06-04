@@ -65,11 +65,11 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
 
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
             if (viewModel.isWatchListEnabled) {
-                viewModel.onWatchListEnabled()
+                viewModel.disableWatchList()
                 menuItem.setIcon(R.drawable.tv_disabled)
                 binding.searchInput.editText?.setText(viewModel.query)
             } else {
-                viewModel.onWatchListDisabled()
+                viewModel.enableWatchList()
                 menuItem.setIcon(R.drawable.tv_enabled)
                 binding.searchInput.editText?.setText(viewModel.query)
             }
@@ -97,7 +97,6 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
     }
 
     override fun onItemClicked(mediaId: Int, mediaType: MediaType) {
-        viewModel.onItemClicked()
         findNavController().navigate(
             SearchFragmentDirections.actionSearchFragmentToDetailFragment(
                 mediaId,

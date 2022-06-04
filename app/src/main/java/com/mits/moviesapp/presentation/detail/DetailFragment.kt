@@ -22,8 +22,8 @@ import kotlinx.coroutines.launch
 class DetailFragment : Fragment() {
     private lateinit var binding: FragmentDetailBinding
     private val viewModel: DetailViewModel by viewModels()
-    lateinit var mediaDetail: MediaDetail
-    lateinit var detailState: DetailState
+    private lateinit var mediaDetail: MediaDetail
+    private lateinit var detailState: DetailState
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,27 +42,13 @@ class DetailFragment : Fragment() {
 
         // observe state
         lifecycleScope.launch {
-            viewModel.detailState.collect {
-                it.detailItem?.mediaType = args.mediaType
-                it.detailItem?.let { it1 ->
-                    mediaDetail = it1
-                    updateUi(it1)
+            viewModel.detailState.collect { state ->
+                detailState = state
+                state.detailItem?.let {
+                    it.mediaType = args.mediaType
+                    mediaDetail = it
                 }
-                detailState = it
-                if (it.isInWatchList) {
-                    it.view?.let { it1 ->
-                        Snackbar.make(it1, R.string.added, Snackbar.LENGTH_SHORT).show()
-                    }
-                    binding.detailBtn.setImageResource(R.drawable.check)
-                }else {
-                    it.view?.let { it1 ->
-                        Snackbar.make(it1, R.string.deleted, Snackbar.LENGTH_SHORT).show()
-                    }
-                        binding.detailBtn.setImageResource(R.drawable.add)
-
-                    }
-                binding.detailProgressBar.isVisible = it.isLoading
-                binding.detailErrorMsg.text = it.error
+                updateUi(state)
             }
         }
 
@@ -83,14 +69,26 @@ class DetailFragment : Fragment() {
         return binding.root
     }
 
-    private fun updateUi(mediaDetail: MediaDetail) {
-        Glide.with(this).load("${Constants.IMAGES_BASE_URL}${mediaDetail.backDropPath}")
+    private fun updateUi(detailState: DetailState) {
+        Glide.with(this).load("${Constants.IMAGES_BASE_URL}${detailState.detailItem?.backDropPath}")
             .placeholder(R.drawable.media_placeholder).into(binding.detailBackDropImg)
-        Glide.with(this).load("${Constants.IMAGES_BASE_URL}${mediaDetail.posterPath}")
+        Glide.with(this).load("${Constants.IMAGES_BASE_URL}${detailState.detailItem?.posterPath}")
             .placeholder(R.drawable.media_placeholder).into(binding.detailPosterImg)
-        binding.detailTitle.text = mediaDetail.title
-        if (mediaDetail.genre.isNotEmpty()) binding.detailGenre.text = mediaDetail.genre
-        binding.detailSummary.text = mediaDetail.summary
-        binding.topAppBar.title = mediaDetail.title
+        binding.detailTitle.text = detailState.detailItem?.title
+        if (mediaDetail.genre.isNotEmpty()) binding.detailGenre.text = detailState.detailItem?.genre
+        binding.detailSummary.text = detailState.detailItem?.summary
+        binding.topAppBar.title = detailState.detailItem?.title
+        binding.detailProgressBar.isVisible = detailState.isLoading
+        binding.detailErrorMsg.text = detailState.error
+
+        if (detailState.isInWatchList) {
+            Snackbar.make(detailState.view!!, R.string.added, Snackbar.LENGTH_SHORT).show()
+            binding.detailBtn.setImageResource(R.drawable.check)
+        } else {
+            Snackbar.make(detailState.view!!, R.string.deleted, Snackbar.LENGTH_SHORT).show()
+            binding.detailBtn.setImageResource(R.drawable.add)
+
+        }
     }
+
 }

@@ -18,7 +18,7 @@ class DetailViewModel @Inject constructor(
     private val _detailState: MutableStateFlow<DetailState> = MutableStateFlow(DetailState())
     val detailState: StateFlow<DetailState> = _detailState.asStateFlow()
 
-    fun getMediaItemById(apiKey: String, id: Int, mediaType: MediaType) {
+    private fun getMediaItemById(apiKey: String, id: Int, mediaType: MediaType) {
         when (mediaType) {
             MediaType.MOVIE -> {
                 detailUseCases.getMovieDetailsUseCase(apiKey, id).onEach { result ->
@@ -62,7 +62,7 @@ class DetailViewModel @Inject constructor(
 
     }
 
-    fun getMediaItemFromDB(id: Int) {
+    private fun getMediaItemFromDB(id: Int) {
         detailUseCases.getMediaItemByIdFromDBUseCase(id).onEach { result ->
             when (result) {
                 is Resource.Loading -> {
