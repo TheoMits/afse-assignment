@@ -7,10 +7,10 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.mits.moviesapp.R
 import com.mits.moviesapp.common.enums.MediaType
 import com.mits.moviesapp.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -65,17 +65,20 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
         })
 
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
-            if (viewModel.isWatchListEnabled()) {
+            if (viewModel.isWatchListEnabled) {
                 viewModel.disableWatchList()
-                menuItem.setIcon(R.drawable.tv_disabled)
-                binding.searchInput.editText?.setText(viewModel.getQuery())
+                binding.searchInput.editText?.setText(viewModel.query)
             } else {
                 viewModel.enableWatchList()
-                menuItem.setIcon(R.drawable.tv_enabled)
-                binding.searchInput.editText?.setText(viewModel.getQuery())
+                binding.searchInput.editText?.setText(viewModel.query)
             }
             return@setOnMenuItemClickListener true
         }
+
+        viewModel.menuItemIcon.observe(viewLifecycleOwner, Observer {
+            binding.topAppBar.menu.getItem(0).setIcon(it)
+        })
+
         return binding.root
     }
 
@@ -86,8 +89,7 @@ class SearchFragment : Fragment(), SearchAdapter.MediaItemListener {
     }
 
     private fun updateViews() {
-        binding.topAppBar.menu.getItem(0).setIcon(viewModel.getMenuIcon())
-        binding.searchInput.editText?.setText(viewModel.getQuery())
+        binding.searchInput.editText?.setText(viewModel.query)
         viewModel.onUpdateView()
     }
 

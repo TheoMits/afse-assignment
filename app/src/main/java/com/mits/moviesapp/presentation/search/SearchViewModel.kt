@@ -1,5 +1,7 @@
 package com.mits.moviesapp.presentation.search
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mits.moviesapp.R
@@ -19,11 +21,15 @@ class SearchViewModel @Inject constructor(
     private val _searchState: MutableStateFlow<SearchState> = MutableStateFlow(SearchState())
     val searchState: StateFlow<SearchState> = _searchState.asStateFlow()
 
+    private val _menuItemIcon: MutableLiveData<Int> = MutableLiveData()
+    val menuItemIcon: LiveData<Int>
+        get() = _menuItemIcon
+
+
     private var mediaItems = mutableListOf<SearchItem>()
     private var searchPage = 1
-    private var isWatchListEnabled = false
-    private var query = ""
-    private var menuIcon = R.drawable.tv_disabled
+    var isWatchListEnabled = false
+    var query = ""
 
     init {
         searchMediaItems(API_KEY, query, searchPage)
@@ -88,18 +94,6 @@ class SearchViewModel @Inject constructor(
         }.launchIn(viewModelScope)
     }
 
-    fun isWatchListEnabled(): Boolean {
-        return isWatchListEnabled
-    }
-
-    fun getQuery(): String {
-        return query
-    }
-
-    fun getMenuIcon(): Int {
-        return menuIcon
-    }
-
     fun onRecyclerScroll() {
         if (!_searchState.value.isLoading && !isWatchListEnabled) {
             searchPage++
@@ -127,14 +121,14 @@ class SearchViewModel @Inject constructor(
 
     fun disableWatchList() {
         resetValues()
-        menuIcon = R.drawable.tv_disabled
+        _menuItemIcon.value = R.drawable.tv_disabled
         searchMediaItems(API_KEY, query, searchPage)
         isWatchListEnabled = false
     }
 
     fun enableWatchList() {
         resetValues()
-        menuIcon = R.drawable.tv_enabled
+        _menuItemIcon.value = R.drawable.tv_enabled
         getWatchList()
         isWatchListEnabled = true
     }
